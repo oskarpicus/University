@@ -1,0 +1,8 @@
+8,Andrei (1),8
+7,Denisa,7
+6,Ilie,6
+5,Ion,5
+4,Andrei,4
+3,Pavel,3
+2,Maria,999
+1,Ana,1
