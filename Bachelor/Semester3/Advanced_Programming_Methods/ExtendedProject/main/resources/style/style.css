@@ -1,0 +1,146 @@
+
+.textAreaTrilogy{
+    -fx-background-color: #f9f7f7;
+    -fx-control-inner-background: #dbe2ef;
+    -fx-font-weight: bold;
+}
+
+.textAreaTrilogy *.text{
+    -fx-text-alignment: center;
+}
+
+.labelTop:hover, .labelLogo:hover{
+    -fx-text-fill: #3f72af;
+}
+
+.labelTop, #labelConversation{
+    -fx-font-family: Tahoma;
+    -fx-font-weight: bold;
+    -fx-font-size: 12;
+}
+
+#labelConversation{
+    -fx-text-fill: #f9f7f7;
+}
+
+.labelLogo{
+    -fx-font-size: 15;
+    -fx-font-family: Tahoma;
+    -fx-font-weight: bold;
+}
+
+.labelFriendRequests, #labelTextFriends{
+    -fx-font-size: 12;
+    -fx-font-family: Tahoma;
+    -fx-font-weight: lighter;
+}
+
+#myLabelHome, #myLabelFriendRequests, #myLabelFriends, #myLabelSearch, #myLabelMessages, #myLabelEvents{
+    -fx-text-fill: #3f72af;
+}
+
+.anchorPaneTop{
+    -fx-background-color: #dbe2ef;
+}
+
+#anchorPaneMiddle{
+    -fx-background-color: #f9f7f7;
+}
+
+#hBoxInformation{
+    -fx-background-color: #3f72af;
+}
+
+.button:hover{
+    -fx-background-color: #112d4e;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.button{
+    -fx-font-weight: bold;
+}
+
+.table-row-cell:selected{
+    -fx-background-color:#112d4e ;
+}
+
+.table-row-cell:selected .text{
+    -fx-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-family: Tahoma;
+}
+
+.table-row-cell .text, .list-view .text{
+    -fx-font-family: Arial;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+}
+
+.table-view .column-header {
+    -fx-background-color:darkorange;
+    -fx-font-weight: bold;
+    -fx-font-family: Tahoma;
+}
+
+.table-view, .list-view{
+    -fx-table-cell-border-color: #112d4e;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: blue;
+    -fx-font-weight: bold;
+}
+
+.table-view .table-column{
+    -fx-alignment: center;
+}
+
+.table-row-cell {
+    -fx-cell-size: 90px;
+}
+
+.table-row-cell:empty {
+    -fx-background-color: white;
+}
+
+.table-row-cell:empty .table-cell {
+    -fx-border-width: 0px;
+}
+
+.anchorPaneButtons{
+    -fx-background-color: #3f72af;
+}
+
+.hBoxSearchUser{
+    -fx-background-color: #f9f7f7;
+}
+
+.list-cell:selected .text{
+    -fx-fill: blue;
+    -fx-font-weight: bold;
+    -fx-font-family: Tahoma;
+}
+
+.list-cell:selected{
+    -fx-background-color: darkorange;
+}
+
+.pagination .pagination-control .left-arrow, .right-arrow{
+    -fx-background-color: #f9f7f7, #3f72af;
+}
+
+.pagination .pagination-control{
+    -fx-background-color: #f9f7f7;
+}
+
+.pagination .pagination-control .toggle-button:selected{
+    -fx-background-color: #112d4e;
+    -fx-text-fill: #f9f7f7;
+    -fx-font-weight: bold;
+}
+
+.pagination{
+    -fx-max-page-indicator-count: 5;
+    -fx-page-information-visible: false;
+}
