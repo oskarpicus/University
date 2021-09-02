@@ -1,0 +1,12 @@
+#comboBoxes * {
+    display: block;
+}
+
+#comboBoxes {
+    float: left;
+    margin-right: 100px;
+}
+
+#games, #games td, #games th {
+    border: 1px solid black;
+}

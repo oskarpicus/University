@@ -1,0 +1,21 @@
+td, th, table{
+    border: 1px solid black;
+}
+
+table{
+    margin: auto;
+}
+
+th:hover{
+    background-color: grey;
+    cursor: pointer;
+}
+
+/*table{*/
+/*    transform: rotate(90deg);*/
+/*}*/
+
+/*p{*/
+/*    transform: rotate(-90deg);*/
+/*}*/
+

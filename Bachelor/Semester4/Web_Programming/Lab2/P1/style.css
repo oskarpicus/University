@@ -1,0 +1,27 @@
+.secondary{
+    width: 200px;
+}
+
+#primary{
+    border: 1px solid black;
+    display: flex;
+    width: 400px;
+    height: auto;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+#divParagraph{
+    float: left;
+}
+
+#divImage{
+    margin: auto;
+}
+
+img{
+    width: 200px;
+    height: 3000px;
+    margin-top: 3px;
+}

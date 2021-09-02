@@ -1,0 +1,23 @@
+:root{
+    --square-size: 225px;
+    --image-size: 200px;
+}
+
+.tablePlay{
+    border: 1px solid crimson;
+    width: 50%;
+    height: 100%;
+}
+
+td{
+    border: 1px solid black;
+    width: var(--square-size);
+    height: var(--square-size);
+}
+
+.game{
+    visibility: hidden;
+    width: var(--image-size);
+    height: var(--image-size);
+    margin: auto;
+}

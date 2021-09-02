@@ -1,0 +1,14 @@
+li{
+    display: inline-block;
+}
+
+.box{
+    position: relative;
+    min-height: 100vh;
+    background-color: var(--div-color);
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+}

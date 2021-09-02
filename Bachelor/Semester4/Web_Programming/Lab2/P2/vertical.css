@@ -1,0 +1,21 @@
+:root{
+    --height: 20em;
+}
+
+nav{
+    float: left;
+    width: 100px;
+}
+
+nav ul li{
+    border-bottom: 1px solid black;
+}
+
+div p{
+    text-align: center;
+}
+
+.content{
+    display: grid;
+  grid-auto-flow: column;
+}

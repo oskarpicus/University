@@ -1,0 +1,26 @@
+
+nav{
+    float: left;
+    width: 100px;
+}
+
+.box {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+header {
+  flex: 0 1 auto;
+  height: 100px;
+}
+
+.content {
+  flex: 1 1 auto;
+  display: grid;
+  grid-auto-flow: column;
+}
+
+footer{
+  flex: 0 1 var(--footer-height);
+}

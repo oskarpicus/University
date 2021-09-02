@@ -1,0 +1,16 @@
+*{
+    margin: auto;
+}
+table{
+    margin-top: 15%;
+    border: 1px solid black;
+}
+
+tr{
+    display: table-row;
+}
+
+td{
+    vertical-align: center;
+    padding: 10px;
+}

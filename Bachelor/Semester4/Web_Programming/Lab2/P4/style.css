@@ -1,0 +1,123 @@
+:root{
+    --height: 80px;
+    --width: 84px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+img{
+    width: var(--width);
+    height: var(--height);
+}
+
+
+ul li a{
+    background: url("icons.png");
+    width: var(--width);
+    height: var(--height);
+    display: block;
+    margin: 0;
+}
+
+ul{
+    list-style-type: none;
+}
+
+#id1{
+    background-position: 0 -84px;
+}
+
+#id1:hover{
+    background-position: 0 0;
+}
+
+#id2{
+    background-position: -84px -84px;
+}
+
+#id2:hover{
+    background-position: -84px 0;
+}
+
+#id3{
+    background-position: -168px -84px;
+}
+
+#id3:hover{
+    background-position: -168px 0;
+}
+
+#id4{
+    background-position: -252px -84px;
+}
+
+#id4:hover{
+    background-position: -252px 0;
+}
+
+#id5{
+    background-position: -336px -84px;
+}
+
+#id5:hover{
+    background-position: -336px 0;
+}
+
+#id6{
+    background-position: -420px -84px;
+}
+
+#id6:hover{
+    background-position: -420px 0;
+}
+
+#id7{
+    background-position: -504px -84px;
+}
+
+#id7:hover{
+    background-position: -504px 0;
+}
+
+#id8{
+    background-position: -588px -84px;
+}
+
+#id8:hover{
+    background-position: -588px 0;
+}
+
+#id9{
+    background-position: -672px -84px;
+}
+
+#id9:hover{
+    background-position: -672px 0;
+}
+
+#id10{
+    background-position: -756px -84px;
+}
+
+#id10:hover{
+    background-position: -756px 0;
+}
+
+#id11{
+    background-position: -840px -84px;
+}
+
+#id11:hover{
+    background-position: -840px 0;
+}
+
+
+/* 
+    pentru orizontal
+*/
+li{
+    float: left;
+}

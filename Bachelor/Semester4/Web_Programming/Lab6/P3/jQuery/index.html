@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>P3 - jQuery</title>
+    <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.4.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <style>
+        #divForm {
+            float: right;
+        }
+        #divForm * {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form method="POST" id="formPerson">
+        <span>
+            <label for="personsIds">Ids:</label>
+            <select id="personsIds"></select>
+        </span>
+        <div id="divForm">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName">
+            <br>
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName">
+            <br>
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="text" id="phoneNumber" name="phoneNumber">
+            <br>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email">
+            <br>
+            <input type="submit" value="Save" disabled id="saveButton">
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+td, th, table{
+    border: 1px solid black;
+}
+
+table{
+    margin: auto;
+}
+
+th:hover{
+    background-color: grey;
+    cursor: pointer;
+}
+
+table{
+    margin-top: 100px;
+    transform: rotate(90deg);
+}
+
+p{
+    transform: rotate(-90deg);
+}
+
+td{
+    height: 100px;
+}

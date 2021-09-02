@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>P1</title>
+</head>
+<body>
+    <form method="GET" action="getTrains.php">
+        <label for="departure">Departure:</label>
+        <input type="text" id="departure" name="departure" required>
+        <br>
+        <label for="arrival">Arrival:</label>
+        <input type="text" id="arrival" name="arrival" required>
+        <br>
+        <label for="notConnecting">Without connecting train:</label>
+        <input type="radio" name="connecting" id="notConnecting" value="without">
+        <br>
+        <label for="connecting">With connecting train:</label>
+        <input type="radio" name="connecting" id="connecting" value="with">
+        <br>
+        <input type="submit" value="Search">
+    </form>
+</body>
+</html>

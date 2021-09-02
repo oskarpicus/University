@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>P3</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+</head>
+<body>
+<div id="divPlay">
+    <label>
+        Nr. Rows:
+        <input type="number" step="2" value="3" name="nrColumns" id="nrRows" min="2" max="20" readonly>
+    </label>
+    <label>
+        Nr. Columns:
+        <input type="number" step="2" value="2" min="2" max="20" id="nrColumns" readonly>
+    </label>
+    <button onclick="startPlay()">Play</button>
+</div>
+<table id="tableGame">
+</table>
+</body>
+</html>

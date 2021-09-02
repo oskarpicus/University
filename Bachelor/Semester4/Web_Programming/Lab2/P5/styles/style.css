@@ -1,0 +1,22 @@
+:root{
+    --size: 200px;
+}
+
+ul, li{
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    height: var(--size);
+    width: var(--size);
+}
+
+ul{
+    list-style-type: none;
+}
+
+ul li p{
+    font-weight: bold;
+    font-size: 24px;
+}

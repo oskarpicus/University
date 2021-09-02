@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contract</title>
+    <script>
+        function makeDisabled(val) {
+            document.getElementById("textFieldSeria").disabled = val;
+            document.getElementById("textFieldNr").disabled = val;
+        }
+    </script>
+</head>
+
+<body>
+    <form action="action.php" method="POST">
+        <table>
+            <tr>
+                <td><img src="../images/rdsrcs.jpg" width="100" height="100" alt="rcs-rds_logo"></td>
+                <td>
+                    <h1>Contract</h1>
+                </td>
+            </tr>
+        </table>
+        <hr>
+        <table>
+            <tr>
+                <td>
+                    <h2>Act adițional din data la</h2>
+                </td>
+                <td><input type="text" readonly name="data" value="24.02.2021" id="textFieldData"></td>
+                <td><input type="text" readonly value="1234"></td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <div>
+                        <p>încheiat între <b>Beneficiar</b> și <b>RCS & RDS SA.</b>, denumită în continuare
+                            <strong>RCS & RDS</strong><br>
+                            <a href="https://www.digi.ro/" target="_blank">Detalii contract</a>
+                        </p>
+                    </div>
+                </td>
+            </tr>
+            <tr><td colspan="3"><hr></td></tr>
+            <tr>
+                <td>
+                    <table>
+                        <tr>
+                            <td>
+                                <h3>Beneficiar</h3>
+                            </td>
+                            <td><span>(client):</span></td>
+                        </tr>
+                    </table>
+                </td>
+                <td colspan="2">
+                    <label for="numePrenume">Nume și prenume</label>
+                    <input type="text" id="numePrenume" size="29" name="numePrenume">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table>
+                        <tr>
+                            <td><h4>Act de identitate:</h4></td>
+                            <td>
+                                <label for="bi_ci">BI/CI</label>
+                                <input type="radio" id="bi_ci" value="1" name="actDeIdentitate" onclick="makeDisabled(false)">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <label for="pasaport">Pașaport</label>
+                    <input type="radio" name="actDeIdentitate" value="2" id="pasaport" onclick="makeDisabled(true)">
+                </td>
+                <td>
+                    <label for="legitimatie">Legitimație de ședere</label>
+                    <input type="radio" name="actDeIdentitate" value="3" id="legitimatie" onclick="makeDisabled(true)">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="textFieldSeria">Seria</label>
+                    <input type="text" maxlength="2" size="2" id="textFieldSeria" name="buletin" disabled>
+                </td>
+                <td>
+                    <label for="textFieldNr">Nr.</label>
+                    <input type="text" maxlength="6" size="6" id="textFieldNr" name="buletin" disabled>
+                </td>
+                <td>
+                    <label for="cnp">CNP</label>
+                    <input type="text" size="15" id="cnp">
+                </td>
+            </tr>
+            <tr><td colspan="3"><hr></td></tr>
+            <tr>
+                <td colspan="3">
+                    <fieldset>
+                        <legend>Adresa:</legend>
+                        <label for="tara">Tara</label>
+                        <select name="tara" id="tara" size="1">
+                            <option value="RO" selected>RO</option>
+                            <option value="HU">HU</option>
+                            <option value="IT">IT</option>
+                            <option value="DE">DE</option>
+                        </select>
+                        <label for="localitate">Localitate</label>
+                        <input type="text" name="adresa" id="localitate">
+                        <label for="judet">Județ</label>
+                        <select id="judet">
+                            <option value="Hunedoara">Hunedoara</option>
+                            <option value="Cluj">Cluj</option>
+                            <option value="Timis">Timiș</option>
+                            <option value="Valcea">Vâlcea</option>
+                        </select>
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="strada">Strada</label>
+                    <input type="text" name="adresa" id="strada">
+                </td>
+                <td colspan="2">
+                    <label for="nr">Nr.</label>
+                    <input type="number" name="adresa" id="nr" min="0" max="100" step="1">
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2"><h4>Adresa de facturare:</h4></td>
+                <td colspan="2">
+                    <input type="checkbox" name="adresaFacturare" id="domiciliu" checked>
+                    <label for="domiciliu">domiciliu</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="checkbox" name="adresaFacturare" id="email">
+                    <label for="email">email</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <textarea rows="5" cols="100">Observații privind instalarea serviciilor</textarea>
+                </td>
+            </tr>
+            <tr>
+                <td><h4>Servicii cerute:</h4></td>
+                <td colspan="2">
+                    <select name="serviciiCerute" id="serviciiCerute" multiple>
+                        <option value="digiOptim">Digi Optim</option>
+                        <option value="digiAvantaj">Digi Avantaj</option>
+                        <option value="catvA">CATV Analog</option>
+                        <option value="catvD">CATV Digital</option>
+                        <option value="fiberLink">FiberLink</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <hr>
+        <h3>Tarife</h3>
+        <ol type="I">
+            <li>
+                <h4>Modulul de Voce</h4>
+                <ol type="A" >
+                    <li>
+                        <h5>Pachete si tarife anuale</h5>
+                        <ul>
+                            <li>
+                                <h6>Digi Mobil Avantaj</h6>
+                                <table>
+                                    <tr>
+                                        <th>Pachet</th>
+                                        <th>Tarif lunar (&euro;)</th>
+                                        <th>Taxa activare (RON)</th>
+                                        <th>Minute incluse</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Digi Mobil Avantaj 2</td>
+                                        <td>2</td>
+                                        <td rowspan="3">50</td>
+                                        <td>200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Digi Mobil Avantaj 3</td>
+                                        <td>3</td>
+                                        <td>300</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Digi Mobil Avantaj 5</td>
+                                        <td>5</td>
+                                        <td>500</td>
+                                    </tr>
+                                </table>
+                            </li>
+                            <li>
+                                <h6>Digi Mobil Optim</h6>
+                                <table>
+                                    <tr>
+                                        <th>Pachet</th>
+                                        <th>Tarif lunar (&euro;)</th>
+                                        <th>Taxa activare</th>
+                                        <th colspan="2">
+                                            <table>
+                                                <tr>
+                                                    <th colspan="2">Numar de minute incluse in reteaua</th>
+                                                </tr>
+                                                <tr>
+                                                    <th>Digi Mobil</th>
+                                                    <th>Alte retele</th>
+                                                </tr>
+                                            </table>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <td>Digi Mobil Optim 2</td>
+                                        <td>2</td>
+                                        <td rowspan="3">50</td>
+                                        <td rowspan="3">Nelimitat</td>
+                                        <td>200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Digi Mobil Optim 3</td>
+                                        <td>3</td>
+                                        <td>300</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Digi Mobil Optim Nelimitat</td>
+                                        <td>9.6</td>
+                                        <td>Nelimitat</td>
+                                    </tr>
+                                </table>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="https://www.digi.ro/" target="_blank" title="Consultați site-ul nostru"><h5>Tarife apeluri</h5></a>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <h4>Modulul de date</h4>
+                <ol start="3" type="A">
+                    <li>
+                        <h5>Pachete si tarife lunare</h5>
+                        <ul>
+                            <li>
+                                <h6>Digi Mobil Avantaj</h6>
+                                <table>
+                                    <tr>
+                                        <th rowspan="3">Internet mobil aferent pachetululi</th>
+                                        <th rowspan="3">Trafic inclus</th>
+                                        <th colspan="8">Viteza maxima estimata de transfer al datelor</th>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">Retea 3G</td>
+                                        <td colspan="2">Retea 4G <br>(2100 MHz, FDD)</td>
+                                        <td colspan="2">Retea 4G <br>(2600 MHz, TDD)</td>
+                                        <td colspan="2">Retea 5G</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Download</td>
+                                        <td>Upload</td>
+                                        <td>Download</td>
+                                        <td>Upload</td>
+                                        <td>Download</td>
+                                        <td>Upload</td>
+                                        <td>Download</td>
+                                        <td>Upload</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Digi Mobil Avantaj 2</td>
+                                        <td rowspan="3">Nelimitat</td>
+                                        <td rowspan="3">15 Mbps</td>
+                                        <td rowspan="3">4.6 Mbps</td>
+                                        <td rowspan="3">75 Mbps</td>
+                                        <td rowspan="3">21 Mbps</td>
+                                        <td rowspan="3">100 Mbps</td>
+                                        <td rowspan="3">10 Mbps</td>
+                                        <td rowspan="3">600 Mbps</td>
+                                        <td rowspan="3">40 Mbps</td>
+                                    </tr>
+                                    <tr><td>Digi Mobil Avantaj 3</td></tr>
+                                    <tr><td>Digi Mobil Avantaj 5</td></tr>
+                                </table>
+                            </li>
+                            <li><a href="https://digi.ro"><h6>Digi Mobil Optim</h6></a></li>
+                        </ul>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+        <input type="submit" value="Salvează și trimite">
+    </form>
+</body>
+</html>
