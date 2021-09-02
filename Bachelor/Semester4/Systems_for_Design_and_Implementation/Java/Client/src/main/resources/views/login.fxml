@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
+    <SplitPane dividerPositions="0.3" layoutX="111.0" layoutY="25.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+            <Label alignment="CENTER" layoutX="266.0" layoutY="59.0" styleClass="bigLabel" text="Log in" />
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+            <GridPane layoutX="205.0" layoutY="94.0" prefHeight="278.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                </rowConstraints>
+                <Label alignment="CENTER" text="Username" textAlignment="CENTER" GridPane.halignment="CENTER" styleClass="bigLabel" />
+                <Label alignment="CENTER" text="Password" GridPane.halignment="CENTER" GridPane.rowIndex="1" styleClass="bigLabel" />
+                <Button alignment="CENTER" mnemonicParsing="false" onMouseClicked="#buttonLoginClicked" text="Log in" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                <TextField fx:id="textfieldUsername" maxWidth="-Infinity" minWidth="0.0" GridPane.columnIndex="1" />
+                <PasswordField fx:id="textfieldPassword" maxWidth="-Infinity" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            </GridPane>
+        </AnchorPane>
+    </SplitPane>
+</AnchorPane>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import tornadofx.control.*?>
+
+<AnchorPane prefHeight="456.0" prefWidth="862.0" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomeController">
+    <SplitPane dividerPositions="0.2" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+            <Label fx:id="labelGreeting" layoutX="14.0" layoutY="27.0" prefHeight="36.0" prefWidth="643.0" styleClass="bigLabel" text="Hello, these are all the trips:" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="27.0" />
+         <Button layoutX="786.0" layoutY="33.0" mnemonicParsing="false" onAction="#buttonLogOutClicked" text="Log out" />
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+            <SplitPane dividerPositions="0.75" layoutX="199.0" layoutY="41.0" prefHeight="317.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <VBox alignment="CENTER" layoutX="129.0" layoutY="32.0" prefHeight="315.0" prefWidth="357.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <TableView fx:id="tableViewTrips" prefHeight="308.0" prefWidth="511.0">
+                            <columns>
+                                <TableColumn fx:id="tableColumnDestination" prefWidth="75.0" text="Destination" />
+                                <TableColumn fx:id="tableColumnTransportFirm" prefWidth="75.0" text="Transport firm" />
+                                <TableColumn fx:id="tableColumnDepartureTime" prefWidth="75.0" text="Departure time" />
+                                <TableColumn fx:id="tableColumnPrice" prefWidth="75.0" text="Price" />
+                                <TableColumn fx:id="tableColumnSeats" prefWidth="75.0" text="Seats" />
+                            </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                            <VBox.margin>
+                                <Insets bottom="10" left="10" right="10" />
+                            </VBox.margin>
+                        </TableView>
+                        <Button mnemonicParsing="false" onAction="#buttonBookTripClicked" text="Book trip" />
+                    </VBox>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="331.0" prefWidth="271.0">
+                    <VBox alignment="CENTER" layoutX="7.0" layoutY="90.0" prefHeight="360.0" prefWidth="213.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <Label styleClass="bold" text="Destination:">
+                            <VBox.margin>
+                                <Insets bottom="10" right="10" />
+                            </VBox.margin>
+                        </Label>
+                        <TextField fx:id="textfieldDestination">
+                            <VBox.margin>
+                                <Insets bottom="10" right="10" />
+                            </VBox.margin>
+                        </TextField>
+                        <Label styleClass="bold" text="From:">
+                            <VBox.margin>
+                                <Insets bottom="10" right="10" />
+                            </VBox.margin>
+                        </Label>
+                        <DateTimePicker fx:id="datePickerFrom">
+                            <VBox.margin>
+                                <Insets bottom="10" right="10" />
+                            </VBox.margin>
+                        </DateTimePicker>
+                        <Label styleClass="bold" text="To:">
+                            <VBox.margin>
+                                <Insets bottom="10" right="10" />
+                            </VBox.margin>
+                        </Label>
+                        <DateTimePicker fx:id="datePickerTo">
+                            <VBox.margin>
+                                <Insets bottom="10" right="10" />
+                            </VBox.margin>
+                        </DateTimePicker>
+                        <Button mnemonicParsing="false" onMouseClicked="#buttonSearchClicked" text="Search">
+                            <VBox.margin>
+                                <Insets bottom="10" right="10" top="10" />
+                            </VBox.margin>
+                        </Button>
+                    </VBox>
+                </AnchorPane>
+            </SplitPane>
+        </AnchorPane>
+    </SplitPane>
+</AnchorPane>

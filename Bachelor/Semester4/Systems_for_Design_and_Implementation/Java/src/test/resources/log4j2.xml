@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info">
+    <Appenders>
+            <!-- Flow tracing is most useful with a pattern that shows location.
+                 Below pattern outputs class, line number and method name. -->
+        <File name="log" fileName="logging/proiectJavaMPPTest.log" append="true">
+            <PatternLayout pattern="%d{DATE} %-5level %class{36} %L %M - %msg%n"/>
+        </File>c
+    </Appenders>
+    <Loggers>
+        <Root level="error">
+            <AppenderRef ref="log"/>
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+</Configuration>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+    <util:properties id="connectionProperties" location="connection.properties"/>
+
+<!--    <bean id="serverProxy" class="rpcprotocol.ServicesRpcProxy">-->
+<!--        <constructor-arg value="192.168.1.251" />-->
+<!--        <constructor-arg value="1234" />-->
+<!--    </bean>-->
+
+<!--    <bean class="org.springframework.remoting.rmi.RmiProxyFactoryBean">-->
+<!--        <property name="serviceUrl" value="rmi://192.168.1.251:1099/MasterService"/>-->
+<!--        <property name="serviceInterface" value="services.Service" />-->
+<!--    </bean>-->
+
+</beans>

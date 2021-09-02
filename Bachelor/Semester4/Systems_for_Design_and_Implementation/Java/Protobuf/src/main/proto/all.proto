@@ -1,0 +1,86 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+option java_package = "proto";
+option java_multiple_files = true;
+
+service Service{
+  rpc findUser (FindUserRequest) returns (FindUserResponse);
+  rpc getAllTrips (Empty) returns (stream Trip);
+  rpc findTrips (TripDataDTO) returns (stream TripDTO);
+  rpc bookTrip (BookTripRequest) returns (BookTripResponse);
+  rpc logout (User) returns (Empty);
+}
+
+service Observer{
+  rpc tripChanged (Trip) returns (Empty);
+}
+
+message FindUserRequest{
+  string username = 1;
+  string password = 2;
+  int32 observerPort = 3;
+}
+
+message BookTripRequest{
+  string client = 1;
+  string phoneNumber = 2;
+  int32 tickets = 3;
+  Trip trip = 4;
+  User user = 5;
+}
+
+message BookTripResponse{
+  oneof result{
+    string errorMessage = 1;
+    Reservation reservation = 2;
+  }
+}
+
+message User{
+  int64 id = 1;
+  string username = 2;
+  string password = 3;
+}
+
+message FindUserResponse{
+  oneof result{
+    string errorMessage = 1;
+    User user = 2;
+  }
+}
+
+message Trip{
+  int64 id = 1;
+  string destination = 2;
+  string transportFirm = 3;
+  google.protobuf.Timestamp departureTime = 4;
+  double price = 5;
+  int32 seats = 6;
+}
+
+message Reservation{
+  int64 id = 1;
+  string client = 2;
+  string phoneNumber = 3;
+  int32 tickets = 4;
+  Trip trip = 5;
+  User user = 6;
+}
+
+message Empty{}
+
+message TripDataDTO{
+  string destination = 1;
+  google.protobuf.Timestamp from = 2;
+  google.protobuf.Timestamp to = 3;
+}
+
+message TripDTO{
+  string transportFirm = 1;
+  google.protobuf.Timestamp departureTime = 2;
+  double price = 3;
+  int32 seats = 4;
+}
+

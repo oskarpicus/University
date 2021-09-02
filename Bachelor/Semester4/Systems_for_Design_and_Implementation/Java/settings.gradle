@@ -1,0 +1,8 @@
+rootProject.name = 'ProiectJavaMPP'
+include 'Domain'
+include 'Repository'
+include 'Client'
+include 'Server'
+include 'Services'
+include 'Protobuf'
+

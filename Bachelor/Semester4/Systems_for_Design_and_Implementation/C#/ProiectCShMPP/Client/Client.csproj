@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{3BB52AA9-E456-4E3D-94D4-5B5F3F7B0E54}</ProjectGuid>
+        <OutputType>WinExe</OutputType>
+        <RootNamespace>GUI</RootNamespace>
+        <AssemblyName>Client</AssemblyName>
+        <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+        <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+        <Deterministic>true</Deterministic>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="log4net, Version=2.0.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a">
+          <HintPath>..\packages\log4net.2.0.12\lib\net45\log4net.dll</HintPath>
+        </Reference>
+        <Reference Include="Npgsql, Version=5.0.3.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7">
+          <HintPath>..\packages\Npgsql.5.0.3\lib\netstandard2.0\Npgsql.dll</HintPath>
+        </Reference>
+        <Reference Include="System" />
+        <Reference Include="System.Configuration" />
+        <Reference Include="System.Core" />
+        <Reference Include="System.Xml.Linq" />
+        <Reference Include="System.Data.DataSetExtensions" />
+        <Reference Include="Microsoft.CSharp" />
+        <Reference Include="System.Data" />
+        <Reference Include="System.Deployment" />
+        <Reference Include="System.Drawing" />
+        <Reference Include="System.Net.Http" />
+        <Reference Include="System.Windows.Forms" />
+        <Reference Include="System.Xml" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="BookTrip.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="BookTrip.Designer.cs">
+          <DependentUpon>BookTrip.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Home.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="Home.Designer.cs">
+          <DependentUpon>Home.cs</DependentUpon>
+        </Compile>
+        <Compile Include="LogIn.cs">
+            <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="LogIn.Designer.cs">
+            <DependentUpon>LogIn.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Program.cs" />
+        <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="SearchTrip.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="SearchTrip.Designer.cs">
+          <DependentUpon>SearchTrip.cs</DependentUpon>
+        </Compile>
+        <EmbeddedResource Include="BookTrip.resx">
+          <DependentUpon>BookTrip.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Home.resx">
+          <DependentUpon>Home.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="LogIn.resx">
+          <DependentUpon>LogIn.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Properties\Resources.resx">
+            <Generator>ResXFileCodeGenerator</Generator>
+            <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+            <SubType>Designer</SubType>
+        </EmbeddedResource>
+        <Compile Include="Properties\Resources.Designer.cs">
+            <AutoGen>True</AutoGen>
+            <DependentUpon>Resources.resx</DependentUpon>
+        </Compile>
+        <EmbeddedResource Include="SearchTrip.resx">
+          <DependentUpon>SearchTrip.cs</DependentUpon>
+        </EmbeddedResource>
+        <None Include="App.config" />
+        <None Include="Properties\Settings.settings">
+            <Generator>SettingsSingleFileGenerator</Generator>
+            <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+        </None>
+        <Compile Include="Properties\Settings.Designer.cs">
+            <AutoGen>True</AutoGen>
+            <DependentUpon>Settings.settings</DependentUpon>
+            <DesignTimeSharedInput>True</DesignTimeSharedInput>
+        </Compile>
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\Domain\Domain.csproj">
+        <Project>{101efe1f-23f2-477d-9b2a-4e18a86c7740}</Project>
+        <Name>Domain</Name>
+      </ProjectReference>
+      <ProjectReference Include="..\Networking\Networking.csproj">
+        <Project>{e7d0d192-f0ad-4c31-bf97-af4f4d05c6b7}</Project>
+        <Name>Networking</Name>
+      </ProjectReference>
+      <ProjectReference Include="..\Services\Services.csproj">
+        <Project>{c90c583a-ff14-4d26-8d5f-575c94088879}</Project>
+        <Name>Services</Name>
+      </ProjectReference>
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

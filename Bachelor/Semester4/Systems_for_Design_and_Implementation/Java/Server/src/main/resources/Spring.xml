@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+    <!-- Validator -->
+    <bean id="reservationValidator" class="domain.validator.ReservationValidator" />
+    <bean id="tripValidator" class="domain.validator.TripValidator" />
+    <bean id="userValidator" class="domain.validator.UserValidator" />
+
+    <util:properties id="properties" location="classpath:config.properties" />
+
+    <bean id="jdbcUtils" class="utils.JdbcUtils">
+        <constructor-arg ref="properties" />
+    </bean>
+
+    <bean id="reservationDBRepository" class="repository.ReservationDBRepository">
+        <constructor-arg ref="jdbcUtils" />
+        <constructor-arg ref="reservationValidator" />
+    </bean>
+
+    <bean id="tripDBRepository" class="repository.TripDBRepository">
+        <constructor-arg ref="jdbcUtils" />
+        <constructor-arg ref="tripValidator" />
+    </bean>
+
+    <bean id="userDBRepository" class="repository.UserDBRepository">
+        <constructor-arg ref="jdbcUtils"/>
+        <constructor-arg ref="userValidator"/>
+    </bean>
+
+    <bean id="userService" class="service.UserService">
+        <constructor-arg ref="userDBRepository"/>
+    </bean>
+
+    <bean id="tripService" class="service.TripService">
+        <constructor-arg ref="tripDBRepository"/>
+    </bean>
+
+    <bean id="reservationService" class="service.ReservationService">
+        <constructor-arg ref="reservationDBRepository"/>
+    </bean>
+
+    <bean id="masterService" class="service.MasterService">
+        <constructor-arg ref="userService" />
+        <constructor-arg ref="tripService" />
+        <constructor-arg ref="reservationService"/>
+    </bean>
+
+<!--    <bean class="org.springframework.remoting.rmi.RmiServiceExporter">-->
+<!--        <property name="serviceName" value="MasterService"/>-->
+<!--        <property name="serviceInterface" value="services.Service"/>-->
+<!--        <property name="service" ref="masterService"/>-->
+<!--        <property name="servicePort" value="1099"/>-->
+<!--    </bean>-->
+
+    <bean id="protoService" class="protobuf.ProtobufService">
+        <constructor-arg ref="masterService"/>
+    </bean>
+
+</beans>

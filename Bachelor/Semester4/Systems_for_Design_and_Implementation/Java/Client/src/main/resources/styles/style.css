@@ -1,0 +1,32 @@
+.split-pane *.split-pane-divider {
+    -fx-padding: 0 1 0 1;
+}
+
+.split-pane-divider {
+    -fx-background-color: transparent;
+}
+
+.text-field{
+    -fx-pref-width: 240px;
+}
+
+.button{
+    -fx-font-weight: bold;
+}
+
+.table-view .label{
+    -fx-font-size: 15px;
+}
+
+.bigLabel {
+    -fx-font-weight: bold;
+    -fx-font-size: 25px;
+}
+
+.bold{
+    -fx-font-weight: bold;
+}
+
+.red{
+    -fx-text-fill: red;
+}

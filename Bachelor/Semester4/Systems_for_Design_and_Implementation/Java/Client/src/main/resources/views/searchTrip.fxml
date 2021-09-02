@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SearchTripController">
+    <SplitPane dividerPositions="0.25" layoutX="89.0" layoutY="32.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+            <Label fx:id="labelGreeting" layoutX="14.0" layoutY="32.0" styleClass="bold" text="Trips in ... between ... and ..." />
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+            <VBox layoutX="180.0" layoutY="40.0" prefHeight="297.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <TableView fx:id="tableViewTrips" prefHeight="356.0" prefWidth="598.0">
+                    <columns>
+                        <TableColumn fx:id="tableColumnTransportFirm" prefWidth="75.0" text="Transport Firm" />
+                        <TableColumn fx:id="tableColumnPrice" prefWidth="75.0" text="Price" />
+                        <TableColumn fx:id="tableColumnDepartureTime" prefWidth="75.0" text="Departure Time" />
+                        <TableColumn fx:id="tableColumnSeats" prefWidth="75.0" text="Seats" />
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                </TableView>
+            </VBox>
+        </AnchorPane>
+    </SplitPane>
+</AnchorPane>
