@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="domain.User" table="Users" discriminator-value="user">
+        <id name="id" column="id" type="java.lang.Long">
+            <generator class="increment"/>
+        </id>
+
+        <discriminator type="java.lang.String" column="type"/>
+
+        <property name="username" type="java.lang.String" column="name"/>
+        <property name="password" type="java.lang.String" column="password"/>
+
+        <subclass name="domain.Tester" discriminator-value="tester">
+            <set name="foundBugs" cascade="all">
+                <key column="testerId"/>
+                <one-to-many class="domain.Bug"/>
+            </set>
+        </subclass>
+
+        <subclass name="domain.Programmer" discriminator-value="programmer">
+            <set name="resolvedBugs">
+                <key column="programmerResolverId"/>
+                <one-to-many class="domain.Bug"/>
+            </set>
+        </subclass>
+    </class>
+</hibernate-mapping>

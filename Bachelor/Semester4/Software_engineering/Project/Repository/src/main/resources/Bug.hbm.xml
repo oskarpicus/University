@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="domain.Bug" table="Bugs">
+        <id name="id" column="id" type="java.lang.Long">
+            <generator class="increment"/>
+        </id>
+        <property name="name" type="java.lang.String" column="name"/>
+        <property name="description" type="java.lang.String" column="description"/>
+
+        <many-to-one name="tester" not-null="true" class="domain.Tester" column="testerId"/>
+        <many-to-one name="programmer" not-null="false" class="domain.Programmer" column="programmerResolverId"/>
+
+        <property name="status" column="status">
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">domain.Status</param>
+            </type>
+        </property>
+
+        <property name="severity" column="severity">
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">domain.Severity</param>
+            </type>
+        </property>
+    </class>
+</hibernate-mapping>

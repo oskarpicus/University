@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ViewBugsTesterController">
+    <!-- Menu -->
+    <VBox layoutX="14.0" layoutY="44.0" prefHeight="400.0" prefWidth="181.0" styleClass="blue" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <VBox alignment="CENTER" onMouseClicked="#buttonHomeClicked" prefHeight="100.0" prefWidth="200.0" spacing="10" styleClass="menuItem" VBox.vgrow="ALWAYS">
+            <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../images/iconUserMenu.png" />
+            </ImageView>
+            <Label text="Home" />
+        </VBox>
+        <VBox alignment="CENTER" onMouseClicked="#buttonAddBugClicked" prefHeight="100.0" prefWidth="200.0" spacing="10" styleClass="menuItem" VBox.vgrow="ALWAYS">
+            <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../images/addBug.png" />
+            </ImageView>
+            <Label text="Add bug" />
+        </VBox>
+        <VBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10" styleClass="menuItem" VBox.vgrow="ALWAYS">
+            <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../images/bug.png" />
+            </ImageView>
+            <Label text="View bugs" />
+            <styleClass>
+                <String fx:value="menuItem" />
+                <String fx:value="selectedItem" />
+            </styleClass>
+        </VBox>
+    </VBox>
+    <!-- End of Menu -->
+    <VBox alignment="CENTER" layoutX="275.0" layoutY="100.0" prefHeight="400.0" prefWidth="419.0" spacing="20" styleClass="grey" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <Label styleClass="blackText" text="Here are all the bugs that you have added" />
+        <TableView fx:id="tableViewBugs" prefHeight="304.0" prefWidth="379.0">
+            <columns>
+                <TableColumn fx:id="tableColumnName" prefWidth="75.0" text="Name" />
+                <TableColumn fx:id="tableColumnSeverity" prefWidth="75.0" text="Severity" />
+            </columns>
+            <VBox.margin>
+                <Insets left="20.0" right="20.0" />
+            </VBox.margin>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+        </TableView>
+    </VBox>
+</AnchorPane>

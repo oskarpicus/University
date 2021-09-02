@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+    <bean id="userValidator" class="validator.UserValidator"/>
+    <bean id="bugValidator" class="validator.BugValidator"/>
+
+    <bean id="userRepository" class="repository.hibernate.UserDBRepository">
+        <constructor-arg ref="userValidator"/>
+    </bean>
+
+    <bean id="bugRepository" class="repository.hibernate.BugDBRepository">
+        <constructor-arg ref="bugValidator"/>
+    </bean>
+
+    <bean id="userService" class="service.UserService">
+        <constructor-arg ref="userRepository"/>
+    </bean>
+
+    <bean id="bugService" class="service.BugService">
+        <constructor-arg ref="bugRepository"/>
+    </bean>
+
+    <bean id="masterService" class="service.MasterService">
+        <constructor-arg ref="userService"/>
+        <constructor-arg ref="bugService"/>
+    </bean>
+
+    <bean class="org.springframework.remoting.rmi.RmiServiceExporter">
+        <property name="serviceName" value="MasterService"/>
+        <property name="serviceInterface" value="services.Service"/>
+        <property name="service" ref="masterService"/>
+        <property name="servicePort" value="1099"/>
+    </bean>
+
+</beans>
