@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="domain.Round" table="rounds" lazy="false">
+        <id name="id" column="id" type="java.lang.Long">
+            <generator class="increment"/>
+        </id>
+        <property name="indexRound" type="java.lang.Integer" column="index_round"/>
+        <many-to-one name="player" column="player_id" lazy="false" class="domain.Player"/>
+        <many-to-one name="game" column="game_id" lazy="false" class="domain.Game"/>
+        <many-to-one name="cardSent" lazy="false" class="domain.Card" column="card_sent_id"/>
+        <set name="cardsWon" lazy="false" table="round_card">
+            <key column="round_id"/>
+            <many-to-many lazy="false" class="domain.Card" column="card_id"/>
+        </set>
+    </class>
+</hibernate-mapping>

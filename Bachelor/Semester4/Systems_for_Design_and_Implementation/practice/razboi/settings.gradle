@@ -1,0 +1,9 @@
+rootProject.name = 'razboi'
+include 'Domain'
+include 'Repository'
+include 'Services'
+include 'Server'
+include 'Domain'
+include 'Client'
+include 'RestServices'
+

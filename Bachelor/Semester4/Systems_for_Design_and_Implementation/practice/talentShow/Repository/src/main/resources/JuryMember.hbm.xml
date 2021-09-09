@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class lazy="false" name="domain.JuryMember" table="jurymembers">
+        <id name="id" column="id" type="java.lang.Long">
+            <generator class="increment"/>
+        </id>
+        <property name="username" column="username" type="java.lang.String"/>
+        <property name="password" column="password" type="java.lang.String"/>
+        <set name="marks" table="marks" lazy="false" cascade="all">
+            <key column="jury_member_id"/>
+            <one-to-many class="domain.Mark"/>
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,8 @@
+rootProject.name = 'talentShow'
+include 'Domain'
+include 'Repository'
+include 'Server'
+include 'Services'
+include 'Client'
+include 'RestServices'
+

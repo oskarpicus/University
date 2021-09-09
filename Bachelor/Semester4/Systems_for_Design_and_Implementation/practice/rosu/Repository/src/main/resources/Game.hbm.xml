@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class table="games" lazy="false" name="domain.Game">
+        <id name="id" column="id" type="java.lang.Long">
+            <generator class="increment"/>
+        </id>
+        <set name="rounds" lazy="false" table="rounds">
+            <key column="game_id"/>
+            <one-to-many class="domain.Round"/>
+        </set>
+        <set name="initialisations" cascade="all" lazy="false" table="initialisations">
+            <key column="game_id"/>
+            <one-to-many class="domain.Initialisation" />
+        </set>
+    </class>
+</hibernate-mapping>

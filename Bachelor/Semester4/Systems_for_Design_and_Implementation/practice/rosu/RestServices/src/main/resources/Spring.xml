@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+    <bean class="validator.PlayerValidator" id="playerValidator" />
+    <bean class="validator.GameValidator" id="gameValidator" />
+    <bean class="validator.RoundValidator" id="roundValidator" />
+    <bean class="validator.CardValidator" id="cardValidator" />
+    <bean class="validator.InitialisationValidator" id="initialisationValidator" />
+
+    <bean class="repository.hibernate.PlayerHbRepository" id="playerRepository">
+        <constructor-arg ref="playerValidator"/>
+    </bean>
+    <bean class="repository.hibernate.GameHbRepository" id="gameRepository">
+        <constructor-arg ref="gameValidator"/>
+    </bean>
+    <bean class="repository.hibernate.RoundHbRepository" id="roundRepository">
+        <constructor-arg ref="roundValidator"/>
+    </bean>
+    <bean class="repository.hibernate.CardHbRepository" id="cardRepository">
+        <constructor-arg ref="cardValidator"/>
+    </bean>
+    <bean class="repository.hibernate.InitialisationHbRepository" id="initialisationRepository">
+        <constructor-arg ref="initialisationValidator"/>
+    </bean>
+
+</beans>

@@ -1,0 +1,8 @@
+rootProject.name = 'piticot'
+include 'Domain'
+include 'Repository'
+include 'Services'
+include 'Server'
+include 'Client'
+include 'RestServices'
+

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="domain.Player" table="players" lazy="false">
+        <id name="id" column="id" type="java.lang.Long">
+            <generator class="increment"/>
+        </id>
+        <property name="username" type="java.lang.String" column="username"/>
+        <property name="password" type="java.lang.String" column="password"/>
+        <set name="initialisations" lazy="false" table="initialisations">
+            <key column="player_id"/>
+            <one-to-many class="domain.Initialisation"/>
+        </set>
+        <set name="rounds" lazy="false" table="rounds">
+            <key column="player_id"/>
+            <one-to-many class="domain.Round"/>
+        </set>
+    </class>
+</hibernate-mapping>

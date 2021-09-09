@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+    <bean class="validator.GameValidator" id="gameValidator"/>
+    <bean class="validator.GuessValidator" id="guessValidator"/>
+    <bean class="validator.PlayerValidator" id="playerValidator"/>
+    <bean class="validator.WordValidator" id="wordValidator"/>
+
+    <bean class="repository.hibernate.GameHbRepository" id="gameHbRepository">
+        <constructor-arg ref="gameValidator"/>
+    </bean>
+    <bean class="repository.hibernate.GuessHbRepository" id="guessHbRepository">
+        <constructor-arg ref="guessValidator"/>
+    </bean>
+    <bean class="repository.hibernate.PlayerHbRepository" id="playerHbRepository">
+        <constructor-arg ref="playerValidator"/>
+    </bean>
+    <bean class="repository.hibernate.WordHbRepository" id="wordHbRepository">
+        <constructor-arg ref="wordValidator"/>
+    </bean>
+
+    <bean class="service.MasterService" id="masterService">
+        <constructor-arg ref="gameHbRepository"/>
+        <constructor-arg ref="guessHbRepository"/>
+        <constructor-arg ref="playerHbRepository"/>
+        <constructor-arg ref="wordHbRepository"/>
+    </bean>
+
+    <bean class="org.springframework.remoting.rmi.RmiServiceExporter">
+        <property name="serviceName" value="MasterService"/>
+        <property name="serviceInterface" value="services.Service"/>
+        <property name="service" ref="masterService"/>
+        <property name="servicePort" value="1099"/>
+    </bean>
+
+</beans>

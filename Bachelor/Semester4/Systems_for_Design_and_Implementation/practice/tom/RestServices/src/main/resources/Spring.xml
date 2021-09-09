@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+    <bean class="validator.AnswerValidator" id="answerValidator"/>
+    <bean class="validator.CityValidator" id="cityValidator"/>
+    <bean class="validator.CountryValidator" id="countryValidator"/>
+    <bean class="validator.GameValidator" id="gameValidator"/>
+    <bean class="validator.PlayerValidator" id="playerValidator"/>
+    <bean class="validator.SeaValidator" id="seaValidator"/>
+
+    <bean class="repository.hibernate.AnswerHbRepository" id="answerHbRepository">
+        <constructor-arg ref="answerValidator"/>
+    </bean>
+    <bean class="repository.hibernate.CityHbRepository" id="cityHbRepository">
+        <constructor-arg ref="cityValidator"/>
+    </bean>
+    <bean class="repository.hibernate.CountryHbRepository" id="countryHbRepository">
+        <constructor-arg ref="countryValidator"/>
+    </bean>
+    <bean class="repository.hibernate.GameHbRepository" id="gameHbRepository">
+        <constructor-arg ref="gameValidator"/>
+    </bean>
+    <bean class="repository.hibernate.PlayerHbRepository" id="playerHbRepository">
+        <constructor-arg ref="playerValidator"/>
+    </bean>
+    <bean class="repository.hibernate.SeaHbRepository" id="seaHbRepository">
+        <constructor-arg ref="seaValidator"/>
+    </bean>
+</beans>

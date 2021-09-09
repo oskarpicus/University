@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.GameController">
+   <children>
+      <Button fx:id="buttonStartGame" disable="true" layoutX="27.0" layoutY="348.0" mnemonicParsing="false" onAction="#buttonStartGameClicked" text="Start game" />
+      <Button fx:id="buttonLogout" layoutX="126.0" layoutY="348.0" mnemonicParsing="false" onAction="#buttonLogoutClicked" text="Logout" />
+      <Label layoutX="50.0" layoutY="51.0" text="Current Letter:" />
+      <Label fx:id="labelLetter" layoutX="153.0" layoutY="51.0" text="_" />
+      <Label layoutX="297.0" layoutY="34.0" text="T (Country):" />
+      <Label layoutX="306.0" layoutY="79.0" text="O (City):" />
+      <Label layoutX="307.0" layoutY="130.0" text="M (Sea):" />
+      <TextField fx:id="textFieldCountry" layoutX="389.0" layoutY="30.0" />
+      <TextField fx:id="textFieldCity" layoutX="389.0" layoutY="75.0" />
+      <TextField fx:id="textFieldSea" layoutX="389.0" layoutY="126.0" />
+      <Button fx:id="buttonSubmit" disable="true" layoutX="437.0" layoutY="200.0" mnemonicParsing="false" onAction="#buttonSubmitClicked" text="Submit" />
+   </children>
+</AnchorPane>

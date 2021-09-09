@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="domain.Game" table="games" lazy="false">
+        <id name="id" column="id" type="java.lang.Long">
+            <generator class="increment"/>
+        </id>
+        <set name="answers" lazy="false" table="answers">
+            <key column="game_id"/>
+            <one-to-many class="domain.Answer" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,8 @@
+rootProject.name = 'anagrame'
+include 'Domain'
+include 'Repository'
+include 'Services'
+include 'Server'
+include 'Client'
+include 'RestServices'
+

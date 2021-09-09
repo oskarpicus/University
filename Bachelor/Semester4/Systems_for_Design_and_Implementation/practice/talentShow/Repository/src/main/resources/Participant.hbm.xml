@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="domain.Participant" lazy="false" table="participants">
+        <id name="id" column="id" type="java.lang.Long">
+            <generator class="increment"/>
+        </id>
+        <property name="name" type="java.lang.String" column="name"/>
+        <property name="status" column="status">
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">domain.Status</param>
+            </type>
+        </property>
+        <set name="marks" table="marks" lazy="false" cascade="all">
+            <key column="participant_id"/>
+            <one-to-many class="domain.Mark"/>
+        </set>
+    </class>
+</hibernate-mapping>

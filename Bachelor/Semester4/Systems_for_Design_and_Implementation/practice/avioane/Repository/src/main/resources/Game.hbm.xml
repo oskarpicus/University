@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="domain.Game" lazy="false" table="games">
+        <id name="id" column="id" type="java.lang.Long" >
+            <generator class="increment"/>
+        </id>
+        <set name="planes" table="planes" lazy="false">
+            <key column="game_id"/>
+            <one-to-many class="domain.Plane" />
+        </set>
+        <set name="guesses" table="guesses" lazy="false">
+            <key column="game_id"/>
+            <one-to-many class="domain.Guess" />
+        </set>
+        <many-to-one name="winner" class="domain.Player" column="winner_id" lazy="false"/>
+    </class>
+</hibernate-mapping>

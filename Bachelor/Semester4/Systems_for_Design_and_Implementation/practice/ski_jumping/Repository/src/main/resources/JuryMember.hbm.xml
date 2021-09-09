@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class lazy="false" name="domain.JuryMember" table="jury_members">
+        <id name="id" column="id" type="java.lang.Long">
+            <generator class="increment"/>
+        </id>
+        <property name="username" type="java.lang.String" column="username"/>
+        <property name="password" type="java.lang.String" column="password"/>
+        <set name="marks" table="marks" lazy="false">
+            <key column="jury_member_id"/>
+            <one-to-many class="domain.Mark"/>
+        </set>
+        <property name="aspect" column="aspect">
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">domain.Aspect</param>
+                <param name="useNamed">true</param>
+            </type>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.GameController">
+    <Button fx:id="buttonStartGame" layoutX="14.0" layoutY="350.0" mnemonicParsing="false" onAction="#buttonStartGameClicked" text="Start Game" />
+    <Button fx:id="buttonLogout" layoutX="115.0" layoutY="350.0" mnemonicParsing="false" onAction="#buttonLogoutClicked" text="Logout" />
+    <TableView fx:id="tableViewPlayers" layoutX="15.0" layoutY="57.0" prefHeight="200.0" prefWidth="200.0">
+      <columns>
+          <TableColumn fx:id="tableColumnUsername" prefWidth="75.0" text="Username" />
+      </columns>
+        <columnResizePolicy>
+          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+        </columnResizePolicy>
+    </TableView>
+    <Label layoutX="76.0" layoutY="23.0" text="Online players:" />
+    <Label layoutX="408.0" layoutY="23.0" text="Current anagram:" />
+    <Label fx:id="labelAnagram" layoutX="441.0" layoutY="80.0" />
+    <Button fx:id="buttonSubmit" disable="true" layoutX="429.0" layoutY="226.0" mnemonicParsing="false" onAction="#buttonSubmitClicked" text="Submit" />
+    <TextField fx:id="textFieldAnswer" disable="true" layoutX="388.0" layoutY="145.0" />
+</AnchorPane>

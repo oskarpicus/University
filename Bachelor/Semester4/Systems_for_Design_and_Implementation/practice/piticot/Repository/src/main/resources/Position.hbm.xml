@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="domain.Position" lazy="false" table="positions">
+        <id name="id" type="java.lang.Long" column="id">
+            <generator class="increment"/>
+        </id>
+        <property name="indexPosition" column="indexPosition" type="java.lang.Integer"/>
+        <property name="x" column="x" type="java.lang.Boolean"/>
+        <many-to-one name="game" column="game_id" lazy="false"/>
+        <many-to-one name="player" column="player_id" lazy="false"/>
+    </class>
+</hibernate-mapping>

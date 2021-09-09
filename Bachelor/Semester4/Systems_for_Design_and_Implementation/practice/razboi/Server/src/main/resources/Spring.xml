@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+    <bean class="validator.CardValidator" id="cardValidator"/>
+    <bean class="validator.GameValidator" id="gameValidator"/>
+    <bean class="validator.InitialisationValidator" id="initialisationValidator"/>
+    <bean class="validator.PlayerValidator" id="playerValidator"/>
+    <bean class="validator.RoundValidator" id="roundValidator"/>
+
+    <bean class="repository.hibernate.CardHbRepository" id="cardHbRepository">
+        <constructor-arg ref="cardValidator"/>
+    </bean>
+    <bean class="repository.hibernate.GameHbRepository" id="gameHbRepository">
+        <constructor-arg ref="gameValidator"/>
+    </bean>
+    <bean class="repository.hibernate.InitialisationHbRepository" id="initialisationHbRepository">
+        <constructor-arg ref="initialisationValidator"/>
+    </bean>
+    <bean class="repository.hibernate.PlayerHbRepository" id="playerHbRepository">
+        <constructor-arg ref="playerValidator"/>
+    </bean>
+    <bean class="repository.hibernate.RoundHbRepository" id="roundHbRepository">
+        <constructor-arg ref="roundValidator"/>
+    </bean>
+
+    <bean class="service.MasterService" id="masterService">
+        <constructor-arg ref="cardHbRepository"/>
+        <constructor-arg ref="gameHbRepository"/>
+        <constructor-arg ref="initialisationHbRepository"/>
+        <constructor-arg ref="playerHbRepository"/>
+        <constructor-arg ref="roundHbRepository"/>
+    </bean>
+
+    <bean class="org.springframework.remoting.rmi.RmiServiceExporter">
+        <property name="serviceName" value="MasterService"/>
+        <property name="serviceInterface" value="services.Service"/>
+        <property name="service" ref="masterService"/>
+        <property name="servicePort" value="1099"/>
+    </bean>
+
+</beans>

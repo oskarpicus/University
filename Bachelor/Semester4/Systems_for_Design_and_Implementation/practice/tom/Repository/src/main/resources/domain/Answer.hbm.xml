@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="domain.Answer" table="answers" lazy="false">
+        <id name="id" column="id" type="java.lang.Long">
+            <generator class="increment"/>
+        </id>
+        <property name="letterChosen" column="letter" type="java.lang.String"/>
+        <property name="points" column="points" type="java.lang.Integer"/>
+        <property name="city" column="city" type="java.lang.String"/>
+        <property name="country" column="country" type="java.lang.String"/>
+        <property name="sea" column="sea" type="java.lang.String"/>
+        <many-to-one name="player" column="player_id" lazy="false" class="domain.Player" />
+        <many-to-one name="game" column="game_id" lazy="false" class="domain.Game"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.GameController">
+   <children>
+      <Button fx:id="buttonStartGame" layoutX="14.0" layoutY="361.0" mnemonicParsing="false" onAction="#buttonStartGameClicked" text="Start game" />
+      <Button fx:id="buttonLogout" layoutX="114.0" layoutY="361.0" mnemonicParsing="false" onAction="#buttonLogoutClicked" text="Logout" />
+      <Label layoutX="28.0" layoutY="46.0" text="Your plane:" />
+      <Label layoutX="28.0" layoutY="81.0" text="Line:" />
+      <Label layoutX="28.0" layoutY="123.0" text="Column:" />
+      <TextField fx:id="textFieldLinePlane" layoutX="72.0" layoutY="77.0" />
+      <TextField fx:id="textFieldColumnPlane" layoutX="72.0" layoutY="119.0" />
+      <GridPane fx:id="gridPane" layoutX="248.0" layoutY="23.0" prefHeight="218.0" prefWidth="322.0" style="-fx-border-color: black;">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="162.0" minWidth="10.0" prefWidth="162.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="161.0" minWidth="10.0" prefWidth="160.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="161.0" minWidth="10.0" prefWidth="160.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Pane prefHeight="200.0" prefWidth="200.0" styleClass="pane" />
+            <Pane prefHeight="200.0" prefWidth="200.0" styleClass="pane" GridPane.rowIndex="1" />
+            <Pane prefHeight="200.0" prefWidth="200.0" styleClass="pane" GridPane.rowIndex="2" />
+            <Pane prefHeight="200.0" prefWidth="200.0" styleClass="pane" GridPane.columnIndex="1" />
+            <Pane prefHeight="200.0" prefWidth="200.0" styleClass="pane" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Pane prefHeight="200.0" prefWidth="200.0" styleClass="pane" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Pane prefHeight="200.0" prefWidth="200.0" styleClass="pane" GridPane.columnIndex="2" />
+            <Pane prefHeight="200.0" prefWidth="200.0" styleClass="pane" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Pane prefHeight="200.0" prefWidth="200.0" styleClass="pane" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <TextField fx:id="textFieldColumnGuess" layoutX="328.0" layoutY="336.0" />
+      <TextField fx:id="textFieldLineGuess" layoutX="328.0" layoutY="299.0" />
+      <Button fx:id="buttonGuess" layoutX="514.0" layoutY="324.0" mnemonicParsing="false" onAction="#buttonGuessClicked" text="Guess" />
+      <Label layoutX="278.0" layoutY="340.0" text="Column:" />
+      <Label layoutX="288.0" layoutY="303.0" text="Line:" />
+      <Label layoutX="366.0" layoutY="256.0" text="Make a guess" />
+      <Label layoutX="368.0" layoutY="7.0" text="Id opponent:" />
+      <Label fx:id="labelIdOpponent" layoutX="450.0" layoutY="6.0" text="_" />
+      <Label fx:id="labelPlane" layoutX="114.0" layoutY="210.0" />
+   </children>
+</AnchorPane>

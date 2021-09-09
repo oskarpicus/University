@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class lazy="false" name="domain.Item" table="items">
+        <id name="id" column="id" type="java.lang.Long">
+            <generator class="increment"/>
+        </id>
+        <property name="position" type="java.lang.Integer" column="position" />
+        <many-to-one name="player" column="player_id" lazy="false" class="domain.Player" />
+        <many-to-one name="game" class="domain.Game" lazy="false" column="game_id"/>
+    </class>
+</hibernate-mapping>

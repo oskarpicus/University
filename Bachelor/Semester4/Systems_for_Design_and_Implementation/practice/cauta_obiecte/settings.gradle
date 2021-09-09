@@ -1,0 +1,8 @@
+rootProject.name = 'cauta_obiecte'
+include 'Domain'
+include 'Repository'
+include 'Services'
+include 'Client'
+include 'Server'
+include 'RestServices'
+

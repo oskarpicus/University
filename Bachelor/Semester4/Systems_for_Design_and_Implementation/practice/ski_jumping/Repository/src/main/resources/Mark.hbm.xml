@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class lazy="false" table="marks" name="domain.Mark">
+        <id name="id" column="id" type="java.lang.Long">
+            <generator class="increment"/>
+        </id>
+        <property name="points" type="java.lang.Integer" column="points" />
+        <property name="jumpNumber" type="java.lang.Integer" column="jump_number"/>
+        <many-to-one name="juryMember" column="jury_member_id" lazy="false" class="domain.JuryMember" />
+        <many-to-one name="participant" column="participant_id" lazy="false" class="domain.Participant" />
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="domain.Employee" table="employees">
+        <id name="id" column="id" type="java.lang.Long">
+            <generator class="increment"/>
+        </id>
+        <property name="name" column="name" type="java.lang.String"/>
+        <set name="skills" cascade="all" table="employee_skill">
+            <key column="employee_id"/>
+            <many-to-many class="domain.Skill" column="skill_id"/>
+        </set>
+    </class>
+</hibernate-mapping>

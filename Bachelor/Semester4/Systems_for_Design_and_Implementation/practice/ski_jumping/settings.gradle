@@ -1,0 +1,8 @@
+rootProject.name = 'ski_jumping'
+include 'Domain'
+include 'Repository'
+include 'Services'
+include 'Server'
+include 'Client'
+include 'RestService'
+

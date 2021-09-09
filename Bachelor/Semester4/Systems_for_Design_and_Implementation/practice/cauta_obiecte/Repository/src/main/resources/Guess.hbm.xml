@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class lazy="false" name="domain.Guess" table="guesses">
+        <id name="id" column="id" type="java.lang.Long">
+            <generator class="increment"/>
+        </id>
+        <property name="points" type="java.lang.Integer" column="points" />
+        <property name="indexRound" type="java.lang.Integer" column="index_round" />
+        <property name="position" type="java.lang.Integer" column="position" />
+        <many-to-one name="guesser" column="guesser_id" lazy="false" class="domain.Player" />
+        <many-to-one name="targetPlayer" column="target_player_id" lazy="false" class="domain.Player" />
+        <many-to-one name="game" column="game_id" lazy="false" class="domain.Game" />
+    </class>
+</hibernate-mapping>
