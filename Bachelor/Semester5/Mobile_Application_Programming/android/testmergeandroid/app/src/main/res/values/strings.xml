@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Expenses App</string>
+    <string name="here_are_your_expenses">Here are your expenses</string>
+    <string name="button">Button</string>
+    <string name="add_expense">Add expense</string>
+    <string name="expense_save_name">Name:</string>
+    <string name="expense_save_sum">Sum:</string>
+    <string name="expense_save_type">Type:</string>
+    <string name="expense_save_due_on">Due on:</string>
+    <string name="expense_save_payed">Payed:</string>
+    <string name="expense_save_button">Save</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="expense_update_button">Update</string>
+    <string name="update_expense">Update expense</string>
+    <string name="expense_delete_button">Delete</string>
+</resources>

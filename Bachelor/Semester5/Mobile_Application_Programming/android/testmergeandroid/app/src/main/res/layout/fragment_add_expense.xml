@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:scrollbars="vertical"
+            android:fillViewport="true"
+>
+    <LinearLayout
+            android:background="@color/light_blue"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context="ui.AddExpense">
+
+        <TextView
+                android:layout_margin="@dimen/margin"
+                android:textColor="@color/dark_blue"
+                android:text="@string/add_expense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView"/>
+        <TextView
+                android:layout_margin="@dimen/margin"
+                android:layout_marginBottom="0dp"
+                android:textColor="@color/dark_blue"
+                android:text="@string/expense_save_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/textView2"/>
+        <EditText
+                android:layout_marginEnd="@dimen/margin"
+                android:layout_marginStart="@dimen/margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editTextTextSaveExpenseName"/>
+        <TextView
+                android:layout_marginBottom="0dp"
+                android:layout_margin="@dimen/margin"
+                android:textColor="@color/dark_blue"
+                android:text="@string/expense_save_sum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/textView3"/>
+        <EditText
+                android:layout_marginEnd="@dimen/margin"
+                android:layout_marginStart="@dimen/margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editTextTextSaveExpenseSum"/>
+        <TextView
+                android:layout_marginBottom="0dp"
+                android:layout_margin="@dimen/margin"
+                android:textColor="@color/dark_blue"
+                android:text="@string/expense_save_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/textView4"/>
+        <Spinner
+                android:layout_marginEnd="@dimen/margin"
+                android:layout_marginStart="@dimen/margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinnerSaveExpenseType"/>
+        <TextView
+                android:layout_marginBottom="0dp"
+                android:layout_margin="@dimen/margin"
+                android:textColor="@color/dark_blue"
+                android:text="@string/expense_save_due_on"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/textView5"/>
+        <EditText
+                android:layout_marginEnd="@dimen/margin"
+                android:layout_marginStart="@dimen/margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:ems="10"
+                android:id="@+id/editTextTextSaveExpenseDate"/>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+            <TextView
+                    android:layout_margin="@dimen/margin"
+                    android:textColor="@color/dark_blue"
+                    android:text="@string/expense_save_payed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/textView6" android:layout_weight="1"/>
+            <CheckBox
+                    android:layout_marginTop="@dimen/margin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBoxSaveExpensePayed"
+                    android:layout_weight="1"/>
+        </LinearLayout>
+        <Button
+                android:layout_margin="@dimen/margin"
+                android:text="@string/expense_save_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_save_expense"/>
+
+    </LinearLayout>
+</ScrollView>

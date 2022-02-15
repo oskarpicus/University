@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/navigation.xml"
+            app:startDestination="@id/displayExpensesFragment">
+    <fragment android:id="@+id/displayExpensesFragment"
+              android:name="ui.DisplayExpensesFragment"
+              tools:layout="@layout/display_expenses"
+              android:label="DisplayExpensesFragment">
+        <action
+                android:id="@+id/action_displayExpensesFragment_to_addExpense"
+                app:destination="@id/addExpense"/>
+        <action android:id="@+id/action_displayExpensesFragment_to_updateExpense" app:destination="@id/updateExpense"/>
+    </fragment>
+    <fragment android:id="@+id/addExpense"
+              android:name="ui.AddExpense"
+              android:label="fragment_add_expense"
+              tools:layout="@layout/fragment_add_expense"
+    >
+        <argument android:name="service" app:argType="service.Service"/>
+    </fragment>
+    <fragment android:id="@+id/updateExpense"
+              android:name="ui.UpdateDeleteExpense"
+              android:label="fragment_update_delete_expense"
+              tools:layout="@layout/fragment_update_delete_expense">
+        <argument
+                android:name="expense"
+                app:argType="model.Expense"
+        />
+        <action android:id="@+id/action_updateExpense_to_displayExpensesFragment"
+                app:destination="@id/displayExpensesFragment"/>
+    </fragment>
+</navigation>

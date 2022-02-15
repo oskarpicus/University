@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="expenseValidator" class="validator.ExpenseValidator"/>
+
+    <bean class="repository.hibernate.ExpenseHbRepository" id="expenseHbRepository">
+        <constructor-arg ref="expenseValidator"/>
+    </bean>
+
+    <bean class="service.MasterService" id="service">
+        <constructor-arg ref="expenseHbRepository"/>
+    </bean>
+
+</beans>

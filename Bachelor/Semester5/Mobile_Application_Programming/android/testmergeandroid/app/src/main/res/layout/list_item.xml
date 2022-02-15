@@ -1,0 +1,41 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="@dimen/list_item_height"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_marginLeft="@dimen/margin"
+             android:layout_marginRight="@dimen/margin"
+             android:gravity="center_vertical">
+
+    <LinearLayout
+            android:background="@color/dark_blue"
+            android:orientation="horizontal"
+            android:layout_width="411dp"
+            android:layout_height="26dp" app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="-2dp"
+    >
+        <TextView
+                android:layout_marginStart="@dimen/margin"
+                android:textColor="@color/white"
+                android:text="TextView"
+                android:layout_width="133dp"
+                android:layout_height="wrap_content" android:id="@+id/text_view_expense_name" android:layout_weight="1"
+        />
+        <TextView
+                android:layout_marginEnd="@dimen/margin"
+                android:textColor="@color/white"
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/text_view_expense_sum" android:layout_weight="1"/>
+        <TextView
+                android:layout_marginStart="@dimen/margin"
+                android:textColor="@color/white"
+                android:layout_width="133dp"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/text_view_expense_id"
+                android:layout_weight="1"
+        />
+    </LinearLayout>
+
+</FrameLayout>

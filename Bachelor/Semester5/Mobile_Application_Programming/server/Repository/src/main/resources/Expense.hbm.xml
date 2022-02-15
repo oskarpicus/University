@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class lazy="false" table="expenses" name="model.Expense">
+        <id name="id" column="id" type="java.lang.String"/>
+        <property name="name" type="java.lang.String" column="name"/>
+        <property name="sum" type="java.lang.Double" column="sum"/>
+        <property name="type" column="type">
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">model.ExpenseType</param>
+                <param name="useNames">true</param>
+            </type>
+        </property>
+        <property name="date" column="date_created"/>
+        <property name="dueOn" column="due_on"/>
+        <property name="payed" column="payed" type="java.lang.Boolean"/>
+    </class>
+</hibernate-mapping>
