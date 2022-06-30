@@ -1,0 +1,39 @@
+{
+  "states": [
+    {
+      "symbol": "q0",
+      "type": "INITIAL"
+    },
+    {
+      "symbol": "q1",
+      "type": "FINAL"
+    }
+  ],
+  "alphabet": [
+    "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"
+  ],
+  "transitions": [
+    {
+      "from": {
+        "symbol": "q0",
+        "type": "INITIAL"
+      },
+      "to": {
+        "symbol": "q1",
+        "type": "FINAL"
+      },
+      "symbols": ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+    },
+    {
+      "from": {
+        "symbol": "q1",
+        "type": "FINAL"
+      },
+      "to": {
+        "symbol": "q1",
+        "type": "FINAL"
+      },
+      "symbols": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+    }
+  ]
+}

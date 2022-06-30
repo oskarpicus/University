@@ -1,0 +1,412 @@
+{
+  "fip": [
+    {
+      "code": 19,
+      "tsCode": -1
+    },
+    {
+      "code": 24,
+      "tsCode": -1
+    },
+    {
+      "code": 28,
+      "tsCode": -1
+    },
+    {
+      "code": 24,
+      "tsCode": -1
+    },
+    {
+      "code": 29,
+      "tsCode": -1
+    },
+    {
+      "code": 24,
+      "tsCode": -1
+    },
+    {
+      "code": 30,
+      "tsCode": -1
+    },
+    {
+      "code": 22,
+      "tsCode": -1
+    },
+    {
+      "code": 24,
+      "tsCode": -1
+    },
+    {
+      "code": 10,
+      "tsCode": -1
+    },
+    {
+      "code": 24,
+      "tsCode": -1
+    },
+    {
+      "code": 31,
+      "tsCode": -1
+    },
+    {
+      "code": 25,
+      "tsCode": -1
+    },
+    {
+      "code": 26,
+      "tsCode": -1
+    },
+    {
+      "code": 24,
+      "tsCode": -1
+    },
+    {
+      "code": 21,
+      "tsCode": -1
+    },
+    {
+      "code": 24,
+      "tsCode": -1
+    },
+    {
+      "code": 10,
+      "tsCode": -1
+    },
+    {
+      "code": 24,
+      "tsCode": -1
+    },
+    {
+      "code": 32,
+      "tsCode": 0
+    },
+    {
+      "code": 24,
+      "tsCode": -1
+    },
+    {
+      "code": 13,
+      "tsCode": -1
+    },
+    {
+      "code": 24,
+      "tsCode": -1
+    },
+    {
+      "code": 33,
+      "tsCode": 3
+    },
+    {
+      "code": 24,
+      "tsCode": -1
+    },
+    {
+      "code": 23,
+      "tsCode": -1
+    },
+    {
+      "code": 24,
+      "tsCode": -1
+    },
+    {
+      "code": 32,
+      "tsCode": 1
+    },
+    {
+      "code": 24,
+      "tsCode": -1
+    },
+    {
+      "code": 22,
+      "tsCode": -1
+    },
+    {
+      "code": 24,
+      "tsCode": -1
+    },
+    {
+      "code": 16,
+      "tsCode": -1
+    },
+    {
+      "code": 24,
+      "tsCode": -1
+    },
+    {
+      "code": 25,
+      "tsCode": -1
+    },
+    {
+      "code": 24,
+      "tsCode": -1
+    },
+    {
+      "code": 32,
+      "tsCode": 0
+    },
+    {
+      "code": 24,
+      "tsCode": -1
+    },
+    {
+      "code": 5,
+      "tsCode": -1
+    },
+    {
+      "code": 24,
+      "tsCode": -1
+    },
+    {
+      "code": 32,
+      "tsCode": 1
+    },
+    {
+      "code": 24,
+      "tsCode": -1
+    },
+    {
+      "code": 26,
+      "tsCode": -1
+    },
+    {
+      "code": 24,
+      "tsCode": -1
+    },
+    {
+      "code": 21,
+      "tsCode": -1
+    },
+    {
+      "code": 24,
+      "tsCode": -1
+    },
+    {
+      "code": 32,
+      "tsCode": 0
+    },
+    {
+      "code": 24,
+      "tsCode": -1
+    },
+    {
+      "code": 13,
+      "tsCode": -1
+    },
+    {
+      "code": 24,
+      "tsCode": -1
+    },
+    {
+      "code": 33,
+      "tsCode": 2
+    },
+    {
+      "code": 24,
+      "tsCode": -1
+    },
+    {
+      "code": 22,
+      "tsCode": -1
+    },
+    {
+      "code": 24,
+      "tsCode": -1
+    },
+    {
+      "code": 20,
+      "tsCode": -1
+    },
+    {
+      "code": 24,
+      "tsCode": -1
+    },
+    {
+      "code": 18,
+      "tsCode": -1
+    },
+    {
+      "code": 24,
+      "tsCode": -1
+    },
+    {
+      "code": 33,
+      "tsCode": 3
+    },
+    {
+      "code": 24,
+      "tsCode": -1
+    },
+    {
+      "code": 22,
+      "tsCode": -1
+    },
+    {
+      "code": 24,
+      "tsCode": -1
+    },
+    {
+      "code": 20,
+      "tsCode": -1
+    }
+  ],
+  "atoms": [
+    {
+      "token": "+",
+      "code": 0
+    },
+    {
+      "token": "-",
+      "code": 1
+    },
+    {
+      "token": "*",
+      "code": 2
+    },
+    {
+      "token": "/",
+      "code": 3
+    },
+    {
+      "token": "%",
+      "code": 4
+    },
+    {
+      "token": "<",
+      "code": 5
+    },
+    {
+      "token": ">",
+      "code": 6
+    },
+    {
+      "token": ">=",
+      "code": 7
+    },
+    {
+      "token": "<=",
+      "code": 7
+    },
+    {
+      "token": "==",
+      "code": 8
+    },
+    {
+      "token": "!=",
+      "code": 9
+    },
+    {
+      "token": "int",
+      "code": 10
+    },
+    {
+      "token": "float",
+      "code": 11
+    },
+    {
+      "token": "struct",
+      "code": 12
+    },
+    {
+      "token": "=",
+      "code": 13
+    },
+    {
+      "token": "::",
+      "code": 14
+    },
+    {
+      "token": ">>",
+      "code": 15
+    },
+    {
+      "token": "if",
+      "code": 16
+    },
+    {
+      "token": "while",
+      "code": 17
+    },
+    {
+      "token": "return",
+      "code": 18
+    },
+    {
+      "token": "#include<iostream>",
+      "code": 19
+    },
+    {
+      "token": "}",
+      "code": 20
+    },
+    {
+      "token": "{",
+      "code": 21
+    },
+    {
+      "token": ";",
+      "code": 22
+    },
+    {
+      "token": ",",
+      "code": 23
+    },
+    {
+      "token": " ",
+      "code": 24
+    },
+    {
+      "token": "(",
+      "code": 25
+    },
+    {
+      "token": ")",
+      "code": 26
+    },
+    {
+      "token": "<<",
+      "code": 27
+    },
+    {
+      "token": "using",
+      "code": 28
+    },
+    {
+      "token": "namespace",
+      "code": 29
+    },
+    {
+      "token": "std",
+      "code": 30
+    },
+    {
+      "token": "main",
+      "code": 31
+    },
+    {
+      "token": "identifier",
+      "code": 32
+    },
+    {
+      "token": "const",
+      "code": 33
+    }
+  ],
+  "ts": [
+    {
+      "code": 0,
+      "token": "a"
+    },
+    {
+      "code": 1,
+      "token": "b"
+    },
+    {
+      "code": 3,
+      "token": "0"
+    },
+    {
+      "code": 2,
+      "token": "1"
+    }
+  ]
+}

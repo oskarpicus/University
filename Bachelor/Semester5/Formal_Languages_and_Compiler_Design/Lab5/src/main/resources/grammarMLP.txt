@@ -1,0 +1,39 @@
+Program$#include<iostream> using namespace std; Data_type main() { Lista_instructiuni return Const ; }
+Lista_instructiuni$Instructiune
+Lista_instructiuni$Instructiune Lista_instructiuni
+Instructiune$Declarare
+Instructiune$Instr_io
+Instructiune$Atrib ;
+Instructiune$Instr_cond
+Instructiune$Instr_ciclic
+Declarare$Data_type Lista_Id ;
+Lista_Id$Identifier
+Lista_Id$Atrib
+Lista_Id$Identifier , Lista_Id
+Lista_Id$Atrib , Lista_Id
+Instr_io$Io_operator Identifier ;
+Io_operator$cin>>
+Io_operator$cout>>
+Atrib$Identifier = Expr
+Termen$Identifier
+Termen$Const
+Expr$Termen
+Expr$Termen Arithmetic_operator Expr
+Arithmetic_operator$+
+Arithmetic_operator$-
+Arithmetic_operator$*
+Arithmetic_operator$/
+Arithmetic_operator$%
+Instr_cond$if ( Conditie ) { Lista_instructiuni }
+Conditie$Expr Relational_operator Expr
+Relational_operator$<
+Relational_operator$>
+Relational_operator$<=
+Relational_operator$>=
+Relational_operator$==
+Relational_operator$!=
+Instr_ciclic$while ( Conditie ) { Lista_instructiuni }
+Data_type$int
+Data_type$float
+Const$constant
+Identifier$identifier

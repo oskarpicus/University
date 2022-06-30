@@ -1,0 +1,199 @@
+{
+  "states": [
+    {
+      "symbol": "q0",
+      "type": "INITIAL"
+    },
+    {
+      "symbol": "q1",
+      "type": "INTERMEDIARY"
+    },
+    {
+      "symbol": "q2",
+      "type": "INTERMEDIARY"
+    },
+    {
+      "symbol": "q3",
+      "type": "FINAL"
+    },
+    {
+      "symbol": "q4",
+      "type": "FINAL"
+    },
+    {
+      "symbol": "q5",
+      "type": "FINAL"
+    },
+    {
+      "symbol": "q6",
+      "type": "INTERMEDIARY"
+    },
+    {
+      "symbol": "q7",
+      "type": "FINAL"
+    },
+    {
+      "symbol": "q8",
+      "type": "INTERMEDIARY"
+    }
+  ],
+  "alphabet": [
+    "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ".", "e", "E", "+", "-", "f", "F", "l", "L"
+  ],
+  "transitions": [
+    {
+      "from": {
+        "symbol": "q0",
+        "type": "INITIAL"
+      },
+      "to": {
+        "symbol": "q1",
+        "type": "INTERMEDIARY"
+      },
+      "symbols": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+    },
+    {
+      "from": {
+        "symbol": "q1",
+        "type": "INTERMEDIARY"
+      },
+      "to": {
+        "symbol": "q1",
+        "type": "INTERMEDIARY"
+      },
+      "symbols": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+    },
+    {
+      "from": {
+        "symbol": "q1",
+        "type": "INTERMEDIARY"
+      },
+      "to": {
+        "symbol": "q2",
+        "type": "INTERMEDIARY"
+      },
+      "symbols": ["e", "E"]
+    },
+    {
+      "from": {
+        "symbol": "q2",
+        "type": "INTERMEDIARY"
+      },
+      "to": {
+        "symbol": "q3",
+        "type": "FINAL"
+      },
+      "symbols": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+    },
+    {
+      "from": {
+        "symbol": "q2",
+        "type": "INTERMEDIARY"
+      },
+      "to": {
+        "symbol": "q8",
+        "type": "INTERMEDIARY"
+      },
+      "symbols": ["+", "-"]
+    },
+    {
+      "from": {
+        "symbol": "q8",
+        "type": "INTERMEDIARY"
+      },
+      "to": {
+        "symbol": "q3",
+        "type": "FINAL"
+      },
+      "symbols": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+    },
+    {
+      "from": {
+        "symbol": "q3",
+        "type": "FINAL"
+      },
+      "to": {
+        "symbol": "q3",
+        "type": "FINAL"
+      },
+      "symbols": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+    },
+    {
+      "from": {
+        "symbol": "q3",
+        "type": "FINAL"
+      },
+      "to": {
+        "symbol": "q4",
+        "type": "FINAL"
+      },
+      "symbols": ["f", "F", "l", "L"]
+    },
+    {
+      "from": {
+        "symbol": "q1",
+        "type": "INTERMEDIARY"
+      },
+      "to": {
+        "symbol": "q5",
+        "type": "FINAL"
+      },
+      "symbols": ["."]
+    },
+    {
+      "from": {
+        "symbol": "q5",
+        "type": "FINAL"
+      },
+      "to": {
+        "symbol": "q2",
+        "type": "INTERMEDIARY"
+      },
+      "symbols": ["e", "E"]
+    },
+    {
+      "from": {
+        "symbol": "q5",
+        "type": "FINAL"
+      },
+      "to": {
+        "symbol": "q7",
+        "type": "FINAL"
+      },
+      "symbols": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+    },
+    {
+      "from": {
+        "symbol": "q0",
+        "type": "INITIAL"
+      },
+      "to": {
+        "symbol": "q6",
+        "type": "INTERMEDIARY"
+      },
+      "symbols": ["."]
+    },
+    {
+      "from": {
+        "symbol": "q6",
+        "type": "INTERMEDIARY"
+      },
+      "to": {
+        "symbol": "q7",
+        "type": "FINAL"
+      },
+      "symbols": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+    },
+    {
+      "from": {
+        "symbol": "q7",
+        "type": "FINAL"
+      },
+      "to": {
+        "symbol": "q2",
+        "type": "INTERMEDIARY"
+      },
+      "symbols": ["e", "E"]
+    }
+  ]
+}

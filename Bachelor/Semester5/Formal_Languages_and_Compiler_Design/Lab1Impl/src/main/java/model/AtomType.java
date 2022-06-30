@@ -1,0 +1,12 @@
+package model;
+
+public enum AtomType {
+    IDENTIFIER,
+    CONSTANT,
+    KEY_WORD,
+    ARITHMETIC_OPERATOR,
+    RELATIONAL_OPERATOR,
+    ASSIGNMENT_OPERATOR,
+    OTHER_OPERATOR,
+    SEPARATOR
+}

@@ -1,0 +1,147 @@
+[
+  {
+    "token": "+",
+    "type": "ARITHMETIC_OPERATOR",
+    "code": 0
+  },
+  {
+    "token": "-",
+    "type": "ARITHMETIC_OPERATOR",
+    "code": 1
+  },
+  {
+    "token": "*",
+    "type": "ARITHMETIC_OPERATOR",
+    "code": 2
+  },
+  {
+    "token": "/",
+    "type": "ARITHMETIC_OPERATOR",
+    "code": 3
+  },
+  {
+    "token": "%",
+    "type": "ARITHMETIC_OPERATOR",
+    "code": 4
+  },
+  {
+    "token": "<",
+    "type": "RELATIONAL_OPERATOR",
+    "code": 5
+  },
+  {
+    "token": ">",
+    "type": "RELATIONAL_OPERATOR",
+    "code": 6
+  },
+  {
+    "token": ">=",
+    "type": "RELATIONAL_OPERATOR",
+    "code": 7
+  },
+  {
+    "token": "<=",
+    "type": "RELATIONAL_OPERATOR",
+    "code": 7
+  },
+  {
+    "token": "==",
+    "type": "RELATIONAL_OPERATOR",
+    "code": 8
+  },
+  {
+    "token": "!=",
+    "type": "RELATIONAL_OPERATOR",
+    "code": 9
+  },
+  {
+    "token": "int",
+    "type": "KEY_WORD",
+    "code": 10
+  },
+  {
+    "token": "float",
+    "type": "KEY_WORD",
+    "code": 11
+  },
+  {
+    "token": "struct",
+    "type": "KEY_WORD",
+    "code": 12
+  },
+  {
+    "token": "=",
+    "type": "ASSIGNMENT_OPERATOR",
+    "code": 13
+  },
+  {
+    "token": "::",
+    "type": "OTHER_OPERATOR",
+    "code": 14
+  },
+  {
+    "token": ">>",
+    "type": "OTHER_OPERATOR",
+    "code": 15
+  },
+  {
+    "token": "if",
+    "type": "KEY_WORD",
+    "code": 16
+  },
+  {
+    "token": "while",
+    "type": "KEY_WORD",
+    "code": 17
+  },
+  {
+    "token": "return",
+    "type": "KEY_WORD",
+    "code": 18
+  },
+  {
+    "token": "#include<iostream>",
+    "type": "KEY_WORD",
+    "code": 19
+  },
+  {
+    "token": "}",
+    "type": "SEPARATOR",
+    "code": 20
+  },
+  {
+    "token": "{",
+    "type": "SEPARATOR",
+    "code": 21
+  },
+  {
+    "token": ";",
+    "type": "SEPARATOR",
+    "code": 22
+  },
+  {
+    "token": ",",
+    "type": "SEPARATOR",
+    "code": 23
+  },
+  {
+    "token": " ",
+    "type": "SEPARATOR",
+    "code": 24
+  },
+  {
+    "token": "(",
+    "type": "SEPARATOR",
+    "code": 25
+  },
+  {
+    "token": ")",
+    "type": "SEPARATOR",
+    "code": 26
+  },
+  {
+    "token": "<<",
+    "type": "OTHER_OPERATOR",
+    "code": 27
+  }
+]

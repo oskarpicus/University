@@ -1,0 +1,2 @@
+#include<iostream> using namespace std; int main() { int identifier = identifier ; return constant ; }
+#include<iostream> using namespace std; int main() { int identifier = constant , identifier ; if ( identifier < identifier ) { identifier = constant ; } return constant ; }

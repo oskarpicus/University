@@ -1,0 +1,58 @@
+{
+  "states": [
+    {
+      "symbol": "q0",
+      "type": "INITIAL"
+    },
+    {
+      "symbol": "q1",
+      "type": "INTERMEDIARY"
+    },
+    {
+      "symbol": "q2",
+      "type": "INTERMEDIARY"
+    },
+    {
+      "symbol": "q3",
+      "type": "FINAL"
+    }
+  ],
+  "alphabet": [
+    "a"
+  ],
+  "transitions": [
+    {
+      "from": {
+        "symbol": "q0",
+        "type": "INITIAL"
+      },
+      "to": {
+        "symbol": "q1",
+        "type": "INTERMEDIARY"
+      },
+      "symbol": "a"
+    },
+    {
+      "from": {
+        "symbol": "q1",
+        "type": "INTERMEDIARY"
+      },
+      "to": {
+        "symbol": "q2",
+        "type": "INTERMEDIARY"
+      },
+      "symbol": "a"
+    },
+    {
+      "from": {
+        "symbol": "q2",
+        "type": "INTERMEDIARY"
+      },
+      "to": {
+        "symbol": "q3",
+        "type": "FINAL"
+      },
+      "symbol": "a"
+    }
+  ]
+}
