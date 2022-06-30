@@ -1,0 +1,9 @@
+rootProject.name = 'P1'
+include 'Domain'
+include 'Repository'
+include 'Server'
+include 'Services'
+include 'Client'
+include 'Networking'
+include 'Client'
+
